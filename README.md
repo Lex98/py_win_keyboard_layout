@@ -37,20 +37,18 @@ py_win_keyboard_layout.change_foreground_window_keyboard_layout(0x04190419)
 
 
 <a name="py_win_keyboard_layout.get_foreground_window_keyboard_layout"/>
-## keyboard.**KEY\_DOWN**
-    = 'down'
+## py_win_keyboard_layout.**get\_foreground\_window\_keyboard\_layout**
 
 
 <a name="py_win_keyboard_layout.change_foreground_window_keyboard_layout"/>
-## keyboard.**KEY\_UP**
-    = 'up'
+## py_win_keyboard_layout.**change\_foreground\_window\_keyboard\_layout**
 
 
 <a name="py_win_keyboard_layout.get_keyboard_layout_list"/>
-## class keyboard.**KeyboardEvent**
+## py_win_keyboard_layout.**get\_keyboard\_layout\_list**
 
 
 
 
 <a name="py_win_keyboard_layout.load_keyboard_layout"/>
-### KeyboardEvent.**event\_type**
+### py_win_keyboard_layout.**load\_keyboard\_layout**
