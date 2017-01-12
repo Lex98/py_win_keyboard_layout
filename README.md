@@ -46,25 +46,24 @@ py_win_keyboard_layout.change_foreground_window_keyboard_layout(0x04190419)
 Returns foreground window keyboard layout as integer
 
 Examples:
-68748313 - 0x04190419 - russian
-67699721 - 0x04090409 - english
+
+    py_win_keyboard_layout.load_keyboard_layout() -> 68748313 - 0x04190419 - russian
+    py_win_keyboard_layout.load_keyboard_layout() ->67699721 - 0x04090409 - english
 
 
 <a name="py_win_keyboard_layout.change_foreground_window_keyboard_layout"/>
 ## py_win_keyboard_layout.**change\_foreground\_window\_keyboard\_layout**
 Change foreground window keyboard layout
 
-Parameter
+Parameter:
 
-layout_id=0 : integer
-
-Integer containing a locale id, eg 68748313 - 0x04190419 - russian
-
+- layout_id=0 : integer
+Integer containing a locale id, eg 68748313 - 0x04190419 - 0x419 - russian
 Default change layout like Ctrl+Shift or Alt+Shift
 
 Return Value
 
-Returns True if layout is changed
+- Returns True if layout is changed
 
 <a name="py_win_keyboard_layout.get_keyboard_layout_list"/>
 ## py_win_keyboard_layout.**get\_keyboard\_layout\_list**
@@ -73,7 +72,7 @@ Returns a tuple of all locale ids currently loaded
 
 Example
 
-(68748313, 67699721)
+    py_win_keyboard_layout.get_keyboard_layout_list() -> (68748313, 67699721)
 
 
 
@@ -82,19 +81,17 @@ Example
 
 Loads a new locale id
 
-Parameters
+Parameters:
 
-string_layout_id : string
-
+- string_layout_id : string
 Hex string containing a locale id, eg "00000409"
 
-Flags=0 : int
-
+- Flags=0 : int
 Combination of win32con.KLF_* constants
 
 Examples
 
-KLF_ACTIVATE|KLF_SETFORPROCESS|KLF_REORDER == 0x109 == 265
+    KLF_ACTIVATE|KLF_SETFORPROCESS|KLF_REORDER == 0x109 == 265
 
 Return Value
 
@@ -102,4 +99,4 @@ Returns the integer locale id that was loaded
 
 Example
 
-load_keyboard_layout("00000409") == 67699721 for english
+    load_keyboard_layout("00000409") -> 67699721 for english

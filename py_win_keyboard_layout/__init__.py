@@ -32,9 +32,9 @@ def change_foreground_window_keyboard_layout(layout_id=0):
 
         layout_id=0 : integer
 
-        Integer containing a locale id, eg 68748313 - 0x04190419 - russian
+        Integer containing a locale id, eg 68748313 - 0x04190419 - 0x419 - russian
 
-        Default change layout like Ctrl+Shift or Alt+Shift
+        By default change layout like Ctrl+Shift or Alt+Shift
 
     Return Value
 
@@ -85,3 +85,9 @@ def load_keyboard_layout(string_layout_id, flags=0):
     load_keyboard_layout("00000409") == 67699721 for english
     """
     return win32api.LoadKeyboardLayout(string_layout_id, flags)
+
+
+__all__ = ["get_foreground_window_keyboard_layout",
+           "change_foreground_window_keyboard_layout",
+           "get_keyboard_layout_list",
+           "load_keyboard_layout"]
