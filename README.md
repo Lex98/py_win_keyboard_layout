@@ -61,7 +61,7 @@ Parameter:
 Integer containing a locale id, eg 68748313 - 0x04190419 - 0x419 - russian
 Default change layout like Ctrl+Shift or Alt+Shift
 
-Return Value
+Return Value:
 
 - Returns True if layout is changed
 
@@ -70,7 +70,7 @@ Return Value
 
 Returns a tuple of all locale ids currently loaded
 
-Example
+Example:
 
     py_win_keyboard_layout.get_keyboard_layout_list() -> (68748313, 67699721)
 
@@ -89,14 +89,14 @@ Hex string containing a locale id, eg "00000409"
 - Flags=0 : int
 Combination of win32con.KLF_* constants
 
-Examples
+Example:
 
     KLF_ACTIVATE|KLF_SETFORPROCESS|KLF_REORDER == 0x109 == 265
 
-Return Value
+Return Value:
 
-Returns the integer locale id that was loaded
+- Returns the integer locale id that was loaded
 
-Example
+Example:
 
     load_keyboard_layout("00000409") -> 67699721 for english
