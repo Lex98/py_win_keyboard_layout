@@ -1,8 +1,7 @@
 py_win_keyboard_layout
 ========
 
-Interaction with keyboard layout on windows
-Tested only on windows 7 x64 with pywin32 build 220
+Interaction with keyboard layout on windows. Tested only on windows 7 x64 with pywin32 build 220
 
 ## Dependency
 
@@ -83,16 +82,17 @@ Loads a new locale id
 
 Parameters:
 
-- string_layout_id : string
+- string_layout_id : string.
 Hex string containing a locale id, eg "00000409"
 
-- Flags=0 : int
-Combination of win32con.KLF_* constants.
-See more information in [msdn](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms646305(v=vs.85).aspx)
+- Flags=0 : int. Combination of win32con.KLF_* constants. See more information in [MSDN](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms646305(v=vs.85).aspx)
 
 Example:
 
     KLF_ACTIVATE|KLF_SETFORPROCESS|KLF_REORDER == 0x109 == 265
+    py_win_keyboard_layout.load_keyboard_layout("00000409", KLF_ACTIVATE|KLF_SETFORPROCESS|KLF_REORDER)
+    py_win_keyboard_layout.load_keyboard_layout("00000409", 0x109)
+    py_win_keyboard_layout.load_keyboard_layout("00000409", 265)
 
 Return Value:
 
