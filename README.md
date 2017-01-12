@@ -47,8 +47,8 @@ Returns foreground window keyboard layout as integer
 
 Examples:
 
-    py_win_keyboard_layout.load_keyboard_layout() -> 68748313 - 0x04190419 - russian
-    py_win_keyboard_layout.load_keyboard_layout() ->67699721 - 0x04090409 - english
+    py_win_keyboard_layout.get_foreground_window_keyboard_layout() -> 68748313 - 0x04190419 - russian
+    py_win_keyboard_layout.get_foreground_window_keyboard_layout() ->67699721 - 0x04090409 - english
 
 
 <a name="py_win_keyboard_layout.change_foreground_window_keyboard_layout"/>
