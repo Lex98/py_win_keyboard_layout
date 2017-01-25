@@ -57,12 +57,11 @@ Change foreground window keyboard layout
 Parameter:
 
 - layout_id=0 : integer
-Integer containing a locale id, eg 68748313 - 0x04190419 - 0x419 - russian.
-Default change layout like Ctrl+Shift or Alt+Shift
+Integer containing a locale id, eg 68748313 - 0x04190419 - 0x419 - russian. Default change layout like Ctrl+Shift or Alt+Shift
 
 Return Value:
 
-- Returns True if layout is changed
+- Returns True if layout is changed and win32api.SendMessage() output if not
 
 <a name="py_win_keyboard_layout.get_keyboard_layout_list"/>
 ## py_win_keyboard_layout.**get\_keyboard\_layout\_list**
@@ -85,7 +84,8 @@ Parameters:
 - string_layout_id : string.
 Hex string containing a locale id, eg "00000409"
 
-- Flags=0 : int. Combination of win32con.KLF_* constants. See more information in [MSDN](msdn.microsoft.com/en-us/library/windows/desktop/ms646305.aspx)
+- Flags=0 : int. 
+Combination of win32con.KLF_* constants. See more information in [MSDN](msdn.microsoft.com/en-us/library/windows/desktop/ms646305.aspx)
 
 Example:
 
