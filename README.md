@@ -85,7 +85,7 @@ Parameters:
 - string_layout_id : string.
 Hex string containing a locale id, eg "00000409"
 
-- Flags=0 : int. Combination of win32con.KLF_* constants. See more information in [MSDN](https://msdn.microsoft.com/ru-ru/library/windows/desktop/ms646305(v=vs.85).aspx)
+- Flags=0 : int. Combination of win32con.KLF_* constants. See more information in [MSDN](msdn.microsoft.com/en-us/library/windows/desktop/ms646305.aspx)
 
 Example:
 
