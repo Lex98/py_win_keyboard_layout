@@ -54,7 +54,6 @@ def change_foreground_window_keyboard_layout(layout_id=0):
         return result
 
 
-
 def get_keyboard_layout_list():
     """
     Returns a tuple of all locale ids currently loaded

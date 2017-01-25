@@ -57,7 +57,7 @@ Change foreground window keyboard layout
 Parameter:
 
 - layout_id=0 : integer
-Integer containing a locale id, eg 68748313 - 0x04190419 - 0x419 - russian
+Integer containing a locale id, eg 68748313 - 0x04190419 - 0x419 - russian.
 Default change layout like Ctrl+Shift or Alt+Shift
 
 Return Value:
@@ -76,7 +76,7 @@ Example:
 
 
 <a name="py_win_keyboard_layout.load_keyboard_layout"/>
-### py_win_keyboard_layout.**load\_keyboard\_layout**
+## py_win_keyboard_layout.**load\_keyboard\_layout**
 
 Loads a new locale id
 
