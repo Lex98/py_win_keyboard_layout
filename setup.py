@@ -7,7 +7,7 @@ def readme():
 
 
 setup(name='py_win_keyboard_layout',
-      version='0.1',
+      version='0.2',
       description='Interaction with keyboard layout on windows',
       long_description=readme(),
       classifiers=[

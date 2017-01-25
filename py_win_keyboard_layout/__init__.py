@@ -7,7 +7,7 @@ import win32gui
 import win32api
 import win32process
 
-WM_INPUTLANGCHANGEREQUEST = 0x0050
+WM_INPUTLANGCHANGEREQUEST = 0x0050  # win32api const
 
 
 def get_foreground_window_keyboard_layout():
@@ -38,13 +38,21 @@ def change_foreground_window_keyboard_layout(layout_id=0):
 
     Return Value
 
-    Returns True if layout is changed
+    Returns True if layout is changed and win32api.SendMessage() output if not
     """
+    if not isinstance(layout_id, int):
+        raise TypeError('parameter must be integer')
+
     window_handle = win32gui.GetForegroundWindow()
-    return not win32api.SendMessage(window_handle,
-                                    WM_INPUTLANGCHANGEREQUEST,
-                                    0,
-                                    layout_id)
+    result = win32api.SendMessage(window_handle,
+                                  WM_INPUTLANGCHANGEREQUEST,
+                                  0,
+                                  layout_id)
+    if result == 0:
+        return True
+    else:
+        return result
+
 
 
 def get_keyboard_layout_list():
@@ -84,6 +92,9 @@ def load_keyboard_layout(string_layout_id, flags=0):
 
     load_keyboard_layout("00000409") == 67699721 for english
     """
+    if not isinstance(string_layout_id, str) or not isinstance(flags, int):
+        raise TypeError('first parameter must be string and second must be int')
+
     return win32api.LoadKeyboardLayout(string_layout_id, flags)
 
 
