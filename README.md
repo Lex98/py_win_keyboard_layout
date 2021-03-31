@@ -40,6 +40,7 @@ py_win_keyboard_layout.change_foreground_window_keyboard_layout(0x04190419)
 
 
 <a name="py_win_keyboard_layout.get_foreground_window_keyboard_layout"/>
+
 ## py_win_keyboard_layout.**get\_foreground\_window\_keyboard\_layout**
 
 Returns foreground window keyboard layout as integer
@@ -51,6 +52,7 @@ Examples:
 
 
 <a name="py_win_keyboard_layout.change_foreground_window_keyboard_layout"/>
+
 ## py_win_keyboard_layout.**change\_foreground\_window\_keyboard\_layout**
 Change foreground window keyboard layout
 
@@ -64,6 +66,7 @@ Return Value:
 - Returns True if layout is changed and win32api.SendMessage() output if not
 
 <a name="py_win_keyboard_layout.get_keyboard_layout_list"/>
+
 ## py_win_keyboard_layout.**get\_keyboard\_layout\_list**
 
 Returns a tuple of all locale ids currently loaded
@@ -75,6 +78,7 @@ Example:
 
 
 <a name="py_win_keyboard_layout.load_keyboard_layout"/>
+
 ## py_win_keyboard_layout.**load\_keyboard\_layout**
 
 Loads a new locale id
